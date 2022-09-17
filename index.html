@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  
+    <title>Boldo</title>
+  </head>
+  <body>
+    <div  id="app">
+      <section class="first-block">
+        <nav class="mobile-header-desktop">
+          <figure class="logo-boldo">
+            <img src="./img/Logo.svg" alt="" />
+          </figure>
+          <figure class="menu-mobile-humburger" @click="toggleMenu"></figure>
+          <ul class="mobile-menu" :class="{ 'dropdown-after' : menuOpen}" >
+            <div id="example1">
+                <li v-for="item in items" >
+                {{ item.message }}
+              </li>
+            </div>
+          </ul>
+        </nav>
+        <section class="wrapper-for-buy-and-diagrams">
+          <section class="buy-and-explore">
+            <h1 class="title">
+              Save time by building fast with Boldo Template
+            </h1>
+            <h2 class="text">
+              Funding handshake buyer business-to-business metrics iPad
+              partnership. First mover advantage innovator success deployment
+              non-disclosure.
+            </h2>
+            <div class="button-area">
+              <button class="buy-template">Buy template</button>
+              <button class="explore">Explore</button>
+            </div>
+          </section>
+          <section class="diagrams">
+            <figure class="wrapper-first-line-diagrams">
+              <img src="./img/diagram1.svg" alt="" />
+            </figure>
+            <div class="wrapper-second-line-diagrams">
+              <figure class="diagram-1">
+                <img src="./img/diagram2.svg" alt="" />
+              </figure>
+              <figure class="diagram-2">
+                <img src="./img/diagram3.svg" alt="" />
+              </figure>
+            </div>
+          </section>
+        </section>
+      </section>
+      <span class="our-services">Our Services</span>
+      <span class="handshake-infographic"
+        >Handshake infographic mass market crowdfunding iteration.</span
+      >
+      <section class="wrapper-cool-features">
+        <div class="wrapper-cool-features-item">
+          <figure><img src="./img/cool1.svg" alt="" /></figure>
+          <div class="cool-features-title">Cool feature title</div>
+          <div class="cool-features-text">
+            Learning curve network effects return on investment.
+          </div>
+          <div class="wrapper-explore-pages">
+            <span>Explore pages</span>
+            <img src="./img/arrow-right.svg" alt="" />
+          </div>
+        </div>
+        <div class="wrapper-cool-features-item">
+          <figure><img src="./img/cool2.svg" alt="" /></figure>
+          <div class="cool-features-title">Even cooler feature</div>
+          <div class="cool-features-text">
+            Learning curve network effects return on investment.
+          </div>
+          <div class="wrapper-explore-pages">
+            <span>Explore pages</span>
+            <img src="./img/arrow-right.svg" alt="" />
+          </div>
+        </div>
+        <div class="wrapper-cool-features-item">
+          <figure><img src="./img/cool3.svg" alt="" /></figure>
+          <div class="cool-features-title">Cool feature title</div>
+          <div class="cool-features-text">
+            Learning curve network effects return on investment.
+          </div>
+          <div class="wrapper-explore-pages">
+            <span>Explore pages</span>
+            <img src="./img/arrow-right.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="wrapper-diagram-up">
+        <figure>
+          <img class="image-on-bottom" src="./img/image-of-man.svg" alt="" />
+          <img
+            class="image-on-top"
+            src="./img/diagram-on-image-man.svg"
+            alt=""
+          />
+        </figure>
+
+        <div class="wrapper-diagram-up-wrapper-text">
+          <span
+            >We connect our customers with the best, and help them keep up-and
+            stay open.</span>
+          <ul>
+            <li>We connect our customers with the best.</li>
+            <li>Advisor success customer launch party.</li>
+            <li>Business-to-consumer long tail.</li>
+          </ul>
+          <button class="Start-now">Start now</button>
+        </div>
+      </section>
+
+      <section class="wrapper-diagram-down">
+        <div class="wrapper-diagram-down-wrapper-text">
+          <span
+            >We connect our customers with the best, and help them keep up-and
+            stay open.</span
+          >
+          <ul>
+            <li class="list-item-one">
+              We connect our customers with the best.
+            </li>
+            <li class="list-item-two">
+              Advisor success customer launch party.
+            </li>
+            <li class="list-item-three">Business-to-consumer long tail.</li>
+          </ul>
+        </div>
+        <figure>
+          <img
+            class="wrapper-diagram-down-image-on-bottom"
+            src="./img/image-women.svg"
+            alt=""
+          />
+          <img
+            class="wrapper-diagram-down-image-on-top"
+            src="./img/diagram-on-image-women.svg"
+            alt=""
+          />
+        </figure>
+      </section>
+
+      <section class="an-enterprise-template">
+        <div class="wrapper-website-and-arrows">
+          <div class="company-website">
+            An enterprise template to ramp up your company website
+          </div>
+          <figure class="wrapper-arrows">
+            <img src="./img/arrow-back.svg" alt="" />
+            <img src="./img/arrow-forward.svg" alt="" />
+          </figure>
+        </div>
+
+        <div class="wrapper-user-responses">
+          <div class="wrapper-user-responses-section">
+            <span
+              >“Buyer buzz partner network disruptive non-disclosure agreement
+              business”</span
+            >
+            <div class="wrapper-user-info">
+              <figure class="user-photo">
+                <img src="./img/albus.svg" alt="" />
+              </figure>
+              <div class="wrapper-user-name">
+                <span class="user-name">Albus Dumbledore</span>
+                <span class="user-work">Manager @ Howarts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="wrapper-user-responses-section">
+            <span
+              >Learning curve infrastructure value proposition advisor strategy
+              user experience hypotheses investor.”</span
+            >
+            <div class="wrapper-user-info">
+              <figure class="user-photo">
+                <img src="./img/severus.svg" alt="" />
+              </figure>
+              <div class="wrapper-user-name">
+                <span class="user-name">Severus Snape</span>
+                <span class="user-work">Manager @ Howarts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="wrapper-user-responses-section">
+            <span
+              >“Release facebook responsive web design business model canvas
+              seed money monetization.”</span
+            >
+            <div class="wrapper-user-info">
+              <figure class="user-photo">
+                <img src="./img/harry.svg" alt="" />
+              </figure>
+              <div class="wrapper-user-name">
+                <span class="user-name">Harry Potter</span>
+                <span class="user-work">Manager @ Howarts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrapper-connect-users">
+        <figure>
+          <img src="./img/workspace.svg" alt="workspace" />
+        </figure>
+        <div class="wrapper-connect-users-text-area">
+          <h1>
+            We connect our customers with the best, and help them keep up-and
+            stay open.
+          </h1>
+          <ul class="wrapper-connect-users-table">
+            <li>We connect our customers with the best?</li>
+            <li>Android research & development rockstar?</li>
+          </ul>
+        </div>
+      </section>
+
+      <span class="our-blog">Our Blog</span>
+      <span class="value-proposition"
+        >Value proposition accelerator product management venture</span
+      >
+
+      <section class="wrapper-value-proposition">
+        <div class="wrapper-value-proposition-item">
+          <figure><img src="./img/Rectangle 1270.svg" alt="" /></figure>
+          <div class="value-proposition-item-date">
+            <span class="value-proposition-category">Category</span>
+            <span>November 22, 2021</span>
+          </div>
+          <div class="value-proposition-item-text">
+            Pitch termsheet backing validation focus release.
+          </div>
+          <div class="value-proposition-item-user-info">
+            <figure class="value-proposition-item-user-photo">
+              <img src="./img/chandler-photo.svg" alt="" />
+            </figure>
+            <span class="value-proposition-item-user-name">Chandler Bing</span>
+          </div>
+        </div>
+
+        <div class="wrapper-value-proposition-item">
+          <figure><img src="./img/Rectangle 1270.svg" alt="" /></figure>
+          <div class="value-proposition-item-date">
+            <span class="value-proposition-category">Category</span>
+            <span>November 22, 2021</span>
+          </div>
+          <div class="value-proposition-item-text">
+            Seed round direct mailing non-disclosure agreement graphical user
+            interface rockstar.
+          </div>
+          <div class="value-proposition-item-user-info">
+            <figure class="value-proposition-item-user-photo">
+              <img src="./img/chandler-photo.svg" alt="" />
+            </figure>
+            <span class="value-proposition-item-user-name">Rachel Green</span>
+          </div>
+        </div>
+        <div class="wrapper-value-proposition-item">
+          <figure><img src="./img/Rectangle 1270.svg" alt="" /></figure>
+          <div class="value-proposition-item-date">
+            <span class="value-proposition-category">Category</span>
+            <span>November 22, 2021</span>
+          </div>
+          <div class="value-proposition-item-text">
+            Beta prototype sales iPad gen-z marketing network effects value
+            proposition
+          </div>
+          <div class="value-proposition-item-user-info">
+            <figure class="value-proposition-item-user-photo">
+              <img src="./img/chandler-photo.svg" alt="" />
+            </figure>
+            <span class="value-proposition-item-user-name">Monica Geller</span>
+          </div>
+        </div>
+      </section>
+
+      <button class="load-more">Load more</button>
+
+      <section class="wrapper-enterprise-template">
+        <h3 class="title">
+          An enterprise template to ramp up your company website
+        </h3>
+        <form action="#">
+          <input
+            type="email"
+            name=""
+            id=""
+            placeholder="Your email address"
+            class="enter-email"
+          />
+          <input
+            type="submit"
+            value="Start now"
+            class="buy-and-explore-start-now"
+          />
+        </form>
+      </section>
+
+      <footer class="footer">
+        <div class="wrapper-menu-footer">
+          <figure><img src="./img/logo-black.svg" alt="" /></figure>
+          <p>
+            Social media validation business model canvas graphical user
+            interface launch party creative facebook iPad twitter.
+          </p>
+        </div>
+        <ul>
+          <li class="menu-footer-first-child">Landings</li>
+          <li>Home</li>
+          <li>Product</li>
+          <li>Services</li>
+        </ul>
+        <ul>
+          <li class="menu-footer-first-child">Company</li>
+          <li>Home</li>
+          <li>Careers <button class="hiring">Hiring!</button></li>
+          <li>Services</li>
+        </ul>
+        <ul>
+          <li class="menu-footer-first-child">Resourses</li>
+          <li>Blogs</li>
+          <li>Products</li>
+          <li>Services</li>
+        </ul>
+      </footer>
+      <footer class="all-rights-reserved">
+        <p>All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<script>
+    window.addEventListener('load', function () {
+      var vm1 = new Vue({
+      el: "#app",
+      data: {
+        menuOpen: false,
+      },
+      methods: {
+        toggleMenu() {
+          return this.menuOpen = !this.menuOpen; 
+        },
+      },
+    })
+    var vm2 = new Vue({
+        el: "#example1",
+        data: {
+            return : {
+                items: [
+                { message: 'Product' },
+                { message: 'Services' },
+                { message: 'About' },
+                { message: 'Log in' }
+                ]
+                  }
+                }
+  })})
+  </script>
