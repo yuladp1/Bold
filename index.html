@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
   
     <title>Boldo</title>
   </head>
@@ -28,11 +28,10 @@
           </figure>
           <figure class="menu-mobile-humburger" @click="toggleMenu"></figure>
           <ul class="mobile-menu" :class="{ 'dropdown-after' : menuOpen}" >
-            <div id="example1">
-                <li v-for="item in items" >
-                {{ item.message }}
+              <li v-for="item in items" >
+                {{ item }}
               </li>
-            </div>
+          
           </ul>
         </nav>
         <section class="wrapper-for-buy-and-diagrams">
@@ -348,33 +347,29 @@
         <p>All rights reserved.</p>
       </footer>
     </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    let app = Vue.createApp({
+        data: function(){
+        return {
+        menuOpen: false,
+        items: [
+                'Product' ,
+                'Services' ,
+                'About' ,
+                'Log in' 
+                ]
+           }
+  
+      methods: {
+        toggleMenu(){
+          return this.menuOpen = !this.menuOpen; 
+        }
+      }
+    })
+   app.mount('#app')
+  </script>
+  
+  
   </body>
 </html>
-
-<script>
-    window.addEventListener('load', function () {
-      var vm1 = new Vue({
-      el: "#app",
-      data: {
-        menuOpen: false,
-      },
-      methods: {
-        toggleMenu() {
-          return this.menuOpen = !this.menuOpen; 
-        },
-      },
-    })
-    var vm2 = new Vue({
-        el: "#example1",
-        data: {
-            return : {
-                items: [
-                { message: 'Product' },
-                { message: 'Services' },
-                { message: 'About' },
-                { message: 'Log in' }
-                ]
-                  }
-                }
-  })})
-  </script>
