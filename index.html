@@ -115,13 +115,9 @@
         </figure>
 
         <div class="wrapper-diagram-up-wrapper-text">
-          <span
-            >We connect our customers with the best, and help them keep up-and
-            stay open.</span>
-          <ul>
-            <li>We connect our customers with the best.</li>
-            <li>Advisor success customer launch party.</li>
-            <li>Business-to-consumer long tail.</li>
+          <span> {{weConnect}}</span>
+          <ul >
+            <li v-for="itemList in list">{{itemList}}</li>
           </ul>
           <button class="Start-now">Start now</button>
         </div>
@@ -129,19 +125,13 @@
 
       <section class="wrapper-diagram-down">
         <div class="wrapper-diagram-down-wrapper-text">
-          <span
-            >We connect our customers with the best, and help them keep up-and
-            stay open.</span
+          <span>{{weConnect}}</span
           >
           <ul>
-            <li class="list-item-one">
-              We connect our customers with the best.
+            <li class="list-item-one" v-for="itemList in list">
+              {{itemList}}
             </li>
-            <li class="list-item-two">
-              Advisor success customer launch party.
-            </li>
-            <li class="list-item-three">Business-to-consumer long tail.</li>
-          </ul>
+            </ul>
         </div>
         <figure>
           <img
@@ -358,7 +348,13 @@
                 'Services' ,
                 'About' ,
                 'Log in' 
-                ]
+                ],
+        weConnect: 'We connect our customers with the best, and help them keep up-and stay open',   
+        list: [
+                'We connect our customers with the best.',
+                'Advisor success customer launch party.',
+                'Business-to-consumer long tail.'
+              ]        
            } 
     },
     methods: {
