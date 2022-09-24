@@ -231,55 +231,19 @@
       >
 
       <section class="wrapper-value-proposition">
-        <div class="wrapper-value-proposition-item">
-          <figure><img src="./img/Rectangle 1270.svg" alt="" /></figure>
+        <div v-for='prop in valuePropArray' class="wrapper-value-proposition-item">
+          <figure><img src={{prop.src}} alt="" /></figure>
           <div class="value-proposition-item-date">
             <span class="value-proposition-category">Category</span>
-            <span>November 22, 2021</span>
+            <span>{{prop.date}}</span>
           </div>
           <div class="value-proposition-item-text">
-            Pitch termsheet backing validation focus release.
-          </div>
+              {{prop.itemText}} </div>
           <div class="value-proposition-item-user-info">
             <figure class="value-proposition-item-user-photo">
-              <img src="./img/chandler-photo.svg" alt="" />
+              <img src={{prop.userPhoto}} alt="" />
             </figure>
-            <span class="value-proposition-item-user-name">Chandler Bing</span>
-          </div>
-        </div>
-
-        <div class="wrapper-value-proposition-item">
-          <figure><img src="./img/Rectangle 1270.svg" alt="" /></figure>
-          <div class="value-proposition-item-date">
-            <span class="value-proposition-category">Category</span>
-            <span>November 22, 2021</span>
-          </div>
-          <div class="value-proposition-item-text">
-            Seed round direct mailing non-disclosure agreement graphical user
-            interface rockstar.
-          </div>
-          <div class="value-proposition-item-user-info">
-            <figure class="value-proposition-item-user-photo">
-              <img src="./img/chandler-photo.svg" alt="" />
-            </figure>
-            <span class="value-proposition-item-user-name">Rachel Green</span>
-          </div>
-        </div>
-        <div class="wrapper-value-proposition-item">
-          <figure><img src="./img/Rectangle 1270.svg" alt="" /></figure>
-          <div class="value-proposition-item-date">
-            <span class="value-proposition-category">Category</span>
-            <span>November 22, 2021</span>
-          </div>
-          <div class="value-proposition-item-text">
-            Beta prototype sales iPad gen-z marketing network effects value
-            proposition
-          </div>
-          <div class="value-proposition-item-user-info">
-            <figure class="value-proposition-item-user-photo">
-              <img src="./img/chandler-photo.svg" alt="" />
-            </figure>
-            <span class="value-proposition-item-user-name">Monica Geller</span>
+            <span class="value-proposition-item-user-name">{{prop.userName}}</span>
           </div>
         </div>
       </section>
@@ -292,6 +256,7 @@
         </h3>
         <form action="#">
           <input
+            v-model="emailAdressFromUser"
             type="email"
             name=""
             id=""
@@ -304,7 +269,7 @@
             class="buy-and-explore-start-now"
           />
         </form>
-      </section>
+    </section>
 
       <footer class="footer">
         <div class="wrapper-menu-footer">
@@ -354,7 +319,31 @@
                 'We connect our customers with the best.',
                 'Advisor success customer launch party.',
                 'Business-to-consumer long tail.'
-              ]        
+              ]  ,
+        valuePropArray: [
+          {
+            src: './img/Rectangle 1270.svg',
+            date: 'November 22, 2021',
+            itemText: 'Pitch termsheet backing validation focus release.',
+            userPhoto: ('../../img/chandler-photo.svg'),
+            userName: 'Chandler Bing'
+          },
+          {
+            src: './img/Rectangle 1270.svg',
+            date: 'November 22, 2021',
+            itemText: 'Seed round direct mailing non-disclosure agreement graphical user interface rockstar.',
+            userPhoto: './img/chandler-photo.svg',
+            userName: 'Rachel Green'
+          },
+          {
+            src: './img/Rectangle 1270.svg',
+            date: 'November 22, 2021',
+            itemText: 'Beta prototype sales iPad gen-z marketing network effects value proposition',
+            userPhoto: './img/chandler-photo.svg',
+            userName: 'Monica Geller'
+          }        
+        ]  ,   
+        emailAdressFromUser: ''      
            } 
     },
     methods: {
